@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<canvas id="background"></canvas>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Interativo</title>
+    <title>Gabriel Esteter | Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header>
-        <h2>Meu Portfólio</h2>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contato">Contato</a>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="logo">Gabriel Esteter</div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </nav>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
     </header>
 
-    <div class="hero">
-        <h1>Olá, me chamo Gabriel Esteter <p> </p>e sou Desenvolvedor Front-End</h1>
-        <p>Esse é meu portfolio feito com HTML, CSS e JavaScript</p>
-    </div>
-
-    <section id="sobre">
-        <h2 class="fade-in">Sobre Mim</h2>
-        <p>Moro na cidade de Mococa-SP e tenho 24 anos.</p>
-        <p>Sou formado em Análise e Desenvolvimento de Sistemas pela UNIP, em 2022.</p>
-        <p>Possuo experiência em HTML, CSS, JavaScript, Java e MySQL, e atualmente estou me aprofundando em React.</p>
-        <p>Tenho preferência pela área de Front-End, mas também aprecio trabalhar com Back-End.</p>
-        <p>Atualmente, estou em busca do meu primeiro emprego na área de desenvolvimento, onde possa aplicar meus
-            conhecimentos e crescer profissionalmente.</p>
-        <p>Encaro obstáculos como oportunidades para inovar e desenvolver soluções criativas e eficientes.</p>
-
-
-    </section>
-
-    <section id="portfolio">
-        <h2 class="fade-in">Meus Projetos</h2>
-        <div class="grid fade-in">
-            <div class="card">Projeto 1</div>
-            <div class="card">Projeto 2</div>
-            <div class="card">Projeto 3</div>
-            <div class="card">Projeto 4</div>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Olá, sou <span>Gabriel Esteter</span></h1>
+            <h2>Desenvolvedor Front-End</h2>
+            <p>Crio interfaces modernas e responsivas com foco em experiência do usuário.</p>
+            <a href="#portfolio" class="btn">Ver Projetos</a>
         </div>
     </section>
 
-    <section id="contato">
-        <h2 class="fade-in">Contato</h2>
-        <form class="fade-in">
-            <input type="text" name="nome" placeholder="Seu nome">
-            <input type="email" name="email" placeholder="Seu email">
-            <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
+    <!-- ===== SOBRE ===== -->
+    <section id="sobre" class="section sobre-secao">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-container">
+            <div class="sobre-imagem">
+                <img src="eu.png" alt="Gabriel Esteter">
+            </div>
+            <div class="sobre-texto">
+                <p>Moro em Mococa-SP, tenho 24 anos e sou formado em <strong>Análise e Desenvolvimento de
+                        Sistemas</strong> pela UNIP (2022).</p>
+                <p>Tenho experiência em <strong>HTML, CSS, JavaScript, Java e MySQL</strong>, e atualmente estou me
+                    aprofundando em React.</p>
+                <p>Tenho preferência pela área de <strong>Front-End</strong>, mas também gosto de atuar em projetos
+                    Back-End.</p>
+                <p>Busco minha primeira oportunidade profissional na área de desenvolvimento para aplicar e expandir
+                    meus conhecimentos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFÓLIO ===== -->
+    <section id="portfolio" class="section">
+        <h2>Meus Projetos</h2>
+        <div class="grid">
+            <article class="card">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="#" class="btn">Ver mais</a>
+            </article>
+            <article class="card">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="#" class="btn">Ver mais</a>
+            </article>
+            <article class="card">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="#" class="btn">Ver mais</a>
+            </article>
+            <article class="card">
+                <h3>Projeto 4</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="#" class="btn">Ver mais</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
             <div class="mensagem-feedback"></div>
         </form>
     </section>
 
-    <footer>
-        <p>© 2025 Meu Portfolio. Todos os direitos reservados.</p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2025 Gabriel Esteter. Todos os direitos reservados.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
