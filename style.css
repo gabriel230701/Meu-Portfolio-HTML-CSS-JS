@@ -257,3 +257,8 @@ form button:hover {
     height: 100%;
     z-index: -1;
 }
+
+p {
+    text-align: center;
+
+}
